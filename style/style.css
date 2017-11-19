@@ -1,0 +1,29 @@
+
+  
+  #carousel {
+    position: relative;
+    border: 1px solid #CCC;
+    border-radius: 15px;
+    background: #eee;
+    overflow: hidden;
+  }
+  
+  #carousel img {
+    width: 130px;
+    height: 130px;  
+    display: block;
+  }
+  
+  #carousel ul {
+    height: 130px;
+    width: 9999px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 250ms;
+    font-size: 0;
+  }
+  
+  #carousel li {
+    display: inline-block;
+  }
