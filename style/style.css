@@ -6,6 +6,7 @@
     border-radius: 15px;
     background: #eee;
     overflow: hidden;
+    display: inline-block;
   }
   
   #carousel img {
@@ -26,4 +27,21 @@
   
   #carousel li {
     display: inline-block;
+  }
+  .speed-button {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    margin: 20px;
+    background: rgb(206, 145, 145);
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .line {
+    position: absolute;
+    width: 5px;
+    height: 130px;
+    background: red;
+    top:10px;
   }
