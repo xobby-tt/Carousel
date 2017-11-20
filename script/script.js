@@ -1,6 +1,6 @@
 var carouselUl = carousel.firstElementChild;
 var imgRect = carouselUl.firstElementChild.getBoundingClientRect();
-var imgWidth = imgRect.right - imgRect.left;
+var imgWidth = imgRect.width;
 var displayAmount = 3;
 
 carousel.style.width = imgWidth * displayAmount + "px";
@@ -8,26 +8,21 @@ carousel.style.width = imgWidth * displayAmount + "px";
 var carouselElements = document.querySelectorAll('#carousel > ul > li');
 
 
-var index = 0;
-var timerId = setInterval(spin, 2000, index);
-
+var timerId = setInterval(spin, 2000);
   
   // через 30 сек остановить повторы
 setTimeout(function() { 
     clearInterval(timerId);
 }, 30000);
 
-function spin() {
-    carousel.removeChild(carousel.firstElementChild);
-    var newUl = document.createElement("ul");        
-    for(var i = index; i < index+displayAmount; i++) {
-        if(i > carouselElements.length - 1) {
-            i = 0;
-            index = -1;
-        }
-        newUl.appendChild(carouselElements[i]);
-    }
-    index = i;
-    carousel.appendChild(newUl);    
+function spin() {         
+        //foo();
+        //carouselUl.style.marginLeft = 0 +"px";
+        carouselUl.appendChild(carouselUl.firstElementChild);
+
 }
 
+function foo()  {
+    for(var j = 0; j < imgRect.width; j+=0.01) 
+        carouselUl.style.marginLeft = -j + "px";
+}
