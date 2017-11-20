@@ -1,30 +1,32 @@
-var carouselUl = carousel.firstElementChild;
-var carouselElements = document.querySelectorAll('#carousel > ul > li');
+var carouselElements = document.querySelectorAll('#content > ul > li');
+var contentUl = content.firstElementChild;
 
 var startTime;
 var endTime;
 
+var speedButton = document.querySelector(".speed-button");
+
 speedButton.onmousedown = function() {
-    startTime = new Date;    
+    startTime = new Date();    
 }
 
 speedButton.onmouseup = function() {
-    endTime = new Date;
+    endTime = new Date();
     speedSpin(startTime, endTime);    
 }
 
 function speedSpin(start, end) {
-    var durity = end - start;
-    var begin = new Date;
+    var duration = end - start;
+    var begin = new Date();
     var timer = setInterval(function() {
         var timePassed = Date.now() - begin;    
         
-            if (timePassed >= durity*5) {
+            if (timePassed >= duration*5) {
                 clearInterval(timer); 
                 return;
               }
             
-            carouselUl.appendChild(carouselUl.firstElementChild);
+            contentUl.appendChild(contentUl.firstElementChild);
     }, 50);
     
     
