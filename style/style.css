@@ -19,7 +19,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    transition: margin-left 250ms;
+    transition: 250ms;
     font-size: 0;
   }
   
