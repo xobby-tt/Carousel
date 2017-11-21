@@ -1,13 +1,13 @@
-var carouselElements = document.querySelectorAll('#content > ul > li');
 var contentUl = content.firstElementChild;
+contentUl.style.marginLeft = "-130px";
 
 var startTime;
 var endTime;
 
 var speedButton = document.querySelector(".speed-button");
 
-for(var i = 0; i < carouselElements.length; i++)  {
-    carouselElements[i].setAttribute("weight", i);
+for(var i = 0; i < contentUl.children.length; i++)  {
+    contentUl.children[i].setAttribute("weight", i);
 }
 
 speedButton.onmousedown = function() {
@@ -30,7 +30,7 @@ function speedSpin(start, end) {
                 return;
               }
             
-            contentUl.insertBefore(randomizer(), contentUl.children[1]);
+            contentUl.insertBefore(randomizer(), contentUl.children[2]);
             contentUl.appendChild(contentUl.firstElementChild);
             
     }, 50);
